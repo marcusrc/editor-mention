@@ -1,0 +1,30 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - rc-tools > koa-serve-index > debug:
+        patched: '2021-09-15T02:52:56.674Z'
+  'npm:lodash:20180130':
+    - rc-tools > babel-eslint > babel-core > lodash:
+        patched: '2021-09-15T02:52:56.674Z'
+    - rc-tools > babel-eslint > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2021-09-15T02:52:56.674Z'
+  'npm:minimatch:20160620':
+    - rc-tools > babel-eslint > babel-core > minimatch:
+        patched: '2021-09-15T02:52:56.674Z'
+    - rc-tools > gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2021-09-15T02:52:56.674Z'
+    - rc-tools > gh-pages > glob > minimatch:
+        patched: '2021-09-15T02:52:56.674Z'
+    - rc-tools > gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2021-09-15T02:52:56.674Z'
+    - rc-tools > gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2021-09-15T02:52:56.674Z'
+  'npm:ms:20151024':
+    - rc-tools > koa-serve-index > debug > ms:
+        patched: '2021-09-15T02:52:56.674Z'
+  'npm:negotiator:20160616':
+    - rc-tools > koa-serve-index > accepts > negotiator:
+        patched: '2021-09-15T02:52:56.674Z'

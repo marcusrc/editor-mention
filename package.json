@@ -37,22 +37,23 @@
     "lint": "rc-tools run lint",
     "lint:fix": "rc-tools run lint --fix",
     "test": "jest",
-    "prepublish": "rc-tools run guard",
-    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "prepublish": "npm run snyk-protect && rc-tools run guard",
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.0.0-beta.5",
     "enzyme-to-json": "^3.0.0-beta6",
-    "jest": "^19.0.2",
+    "jest": "^24.0.0",
     "mock-raf": "^1.0.0",
     "pre-commit": "1.x",
     "rc-form": "1.x",
-    "rc-tools": "7.x",
+    "rc-tools": "9.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-test-renderer": "16.0.0"
+    "react-test-renderer": "16.5.0"
   },
   "pre-commit": [
     "lint"
@@ -64,7 +65,8 @@
     "draft-js": "~0.10.0",
     "prop-types": "^15.5.8",
     "rc-animate": "^2.3.0",
-    "rc-editor-core": "~0.8.3"
+    "rc-editor-core": "~0.8.3",
+    "@snyk/protect": "latest"
   },
   "peerDependencies": {
     "immutable": "^3.7.4"
@@ -83,5 +85,6 @@
     "transform": {
       "\\.jsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
     }
-  }
+  },
+  "snyk": true
 }
